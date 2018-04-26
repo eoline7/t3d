@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@drawable/desktop"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android">
+	<TextView
+		android:text="Тетрис 3D"
+		android:textColor="#c0102010"
+		android:textSize="48sp"
+		android:textStyle="bold"
+		android:shadowRadius="3.0"
+		android:shadowColor="#d0303030"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center"/>
+	<TextView
+		android:text="WL 2013 SH"
+		android:textStyle="italic"
+		android:textColor="#ff201304"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="bottom|right"/>
+	<LinearLayout
+		android:orientation="vertical"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent">
+		<RelativeLayout
+			android:padding="2dp"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content">
+			<TextView android:id="@+id/title"
+				android:text="hello"
+				android:textSize="16sp"
+				android:layout_centerHorizontal="true"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"/>
+			<TextView android:id="@+id/score"
+				android:text=""
+				android:textSize="16sp"
+				android:textColor="#afffff8f"
+				android:layout_alignParentRight="true"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"/>
+		</RelativeLayout>
+		<FrameLayout
+			android:id="@+id/frameLayout1"
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent">
+		    <RelativeLayout android:id="@+id/relativeLayout1"
+				android:padding="8dp"
+				android:layout_width="fill_parent"
+				android:layout_height="fill_parent">
+				<ImageView android:id="@+id/cbVoice"
+					android:src="@drawable/voice"
+					android:layout_alignParentLeft="true"
+					android:layout_above="@+id/cbLight"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"/>
+				<ImageView android:id="@+id/cbLight"
+					android:src="@drawable/light"
+					android:layout_alignParentLeft="true"
+					android:layout_alignParentBottom="true"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"/>
+				<ImageView android:id="@+id/cbPodium"
+					android:src="@drawable/podium"
+					android:layout_alignParentRight="true"
+					android:layout_alignParentBottom="true"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"/>
+				<TableLayout android:id="@+id/tableLayout1"
+					android:layout_centerHorizontal="true"
+					android:layout_width="200dp"
+					android:layout_height="wrap_content">
+					<TableRow android:padding="5dp">
+						<TextView
+							android:text="名次"
+							android:textColor="#ffffffff"
+							android:gravity="left"/>
+						<TextView
+							android:text="分数"
+							android:textColor="#ffffffff"
+							android:layout_width="160dp"
+							android:gravity="right"/>
+					</TableRow>
+					<View
+						android:layout_height="2dp"
+						android:background="#ffffffff"/>
+				</TableLayout>
+			</RelativeLayout>
+		    <RelativeLayout android:id="@+id/relativeLayout2"
+				android:padding="8dp"
+				android:layout_width="fill_parent"
+				android:layout_height="fill_parent">
+				<ImageButton android:id="@+id/btnPause"
+					android:src="@drawable/pause"
+					android:layout_alignParentLeft="true"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"/>
+				<ImageButton android:id="@+id/btnNew"
+					android:src="@drawable/renew"
+					android:layout_toRightOf="@+id/btnPause"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"/>
+				<ImageButton android:id="@+id/btnDropDown"
+					android:visibility="gone"
+					android:src="@drawable/d_down"
+					android:layout_alignParentLeft="true"
+					android:layout_below="@+id/btnPause"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"/>
+				<ImageButton android:id="@+id/btnDropStep"
+					android:visibility="gone"
+					android:src="@drawable/d_step"
+					android:layout_below="@+id/btnNew"
+					android:layout_alignLeft="@+id/btnNew"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"/>
+				<ImageButton android:id="@+id/btnUp"
+					android:src="@drawable/a_up"
+					android:layout_above="@+id/btnRight"
+					android:layout_alignParentRight="true"
+					android:layout_marginRight="24sp"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"/>
+				<ImageButton android:id="@+id/btnDown"
+					android:src="@drawable/a_down"
+					android:layout_alignParentRight="true"
+					android:layout_alignParentBottom="true"
+					android:layout_marginRight="24sp"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"/>
+				<ImageButton android:id="@+id/btnLeft"
+					android:src="@drawable/a_left"
+					android:layout_above="@+id/btnDown"
+					android:layout_toLeftOf="@+id/btnRight"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"/>
+				<ImageButton android:id="@+id/btnRight"
+					android:src="@drawable/a_right"
+					android:layout_above="@+id/btnDown"
+					android:layout_alignParentRight="true"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"/>
+				<ImageButton android:id="@+id/btnZAnti"
+					android:src="@drawable/z_anti"
+					android:layout_alignParentLeft="true"
+					android:layout_alignParentBottom="true"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"/>
+				<ImageButton android:id="@+id/btnZClock"
+					android:visibility="gone"
+					android:src="@drawable/z_clock"
+					android:layout_toRightOf="@+id/btnZAnti"
+					android:layout_alignBottom="@+id/btnZAnti"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"/>
+				<ImageButton android:id="@+id/btnYLeft"
+					android:src="@drawable/y_left"
+					android:layout_alignParentLeft="true"
+					android:layout_above="@+id/btnZAnti"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"/>
+				<ImageButton android:id="@+id/btnYRight"
+					android:visibility="gone"
+					android:src="@drawable/y_right"
+					android:layout_toRightOf="@+id/btnYLeft"
+					android:layout_alignBottom="@+id/btnYLeft"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"/>
+				<ImageButton android:id="@+id/btnXUp"
+					android:src="@drawable/x_up"
+					android:layout_alignParentLeft="true"
+					android:layout_above="@+id/btnYLeft"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"/>
+				<ImageButton android:id="@+id/btnXDown"
+					android:visibility="gone"
+					android:src="@drawable/x_down"
+					android:layout_toRightOf="@+id/btnXUp"
+					android:layout_alignBottom="@+id/btnXUp"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"/>
+			</RelativeLayout>
+		</FrameLayout>
+	</LinearLayout>
+</FrameLayout>

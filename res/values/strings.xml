@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">三维俄罗斯方块</string>
+    <string name="app_name">Tetris3D</string>
+    <string name="developer">Wang Liang</string>
+</resources>
